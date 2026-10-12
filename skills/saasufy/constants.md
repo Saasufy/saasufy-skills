@@ -125,12 +125,15 @@ Alongside your own constants, `process.env` carries the settings of the account 
 | `SAASUFY_SERVICE_AUTH_ENABLED` | boolean | Whether service authentication is enabled. |
 | `SAASUFY_SERVICE_ALLOW_ORIGIN` | string | The service's allowed-origin list. |
 | `SAASUFY_SERVICE_RESPONSE_TIMEOUT` | number | The service's admin client response timeout in milliseconds. |
+| `SAASUFY_SERVICE_WORKER_INDEX` | number | Which worker the invocation is running inside, counted from `0` across the whole fleet. See [scalability.md](scalability.md). |
 | `SAASUFY_SERVICE_WORKER_COUNT` | number | The total worker count across the fleet, which is the per-host count multiplied by the host count — not the number set on the `Settings` page. See [scalability.md](scalability.md). |
 
 Two things to know about them:
 
 - A setting which is not set is **absent** rather than `null`, so it can be tested the way a missing environment variable would be: `if (process.env.SAASUFY_EXTERNAL_AUTH_KEY) { ... }`.
 - They are applied **after** your own constants, so a `Constant` named `SAASUFY_SERVICE_AUTH_KEY` cannot shadow the real one and feed the function a key of its own choosing. Avoid the `SAASUFY_` prefix for your own constants.
+
+`SAASUFY_SERVICE_WORKER_INDEX` is always in the range `0` to `SAASUFY_SERVICE_WORKER_COUNT - 1`, so a function can divide recurring work between the workers by acting only when the index matches, the way the service itself shards its aggregations. Which worker serves a given HTTP call is not predictable, so never use it to hold state a later call expects to find.
 
 `SAASUFY_SERVICE_AUTH_KEY` is the key behind the `auth` global, which is the supported way to verify and sign user tokens; a function rarely needs to read the key itself. Treat all of these as secrets: never return one in a response or log it.
 

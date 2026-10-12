@@ -57,7 +57,7 @@ Required fields:
 - `name` (string, alphanumeric, 1-50 chars) — becomes the last segment of the invocation URL and must be unique within the account. **It cannot be changed afterwards**; the record ID is derived from it, so creating a second function with the same name fails.
 
 Optional fields:
-- `code` (string, max 100000 chars) — the **body** of an async function (see below).
+- `code` (string, max 100000 chars) — the **body** of an async function (see below). Omitted, it defaults to the example function which the dashboard editor shows, so a new function answers with something rather than nothing; pass `""` for a function which should start empty.
 - `timeout` (integer, 50-10000 ms) — null means the platform default of 10000.
 - `memoryLimit` (integer, 1048576-33554432 bytes) — null means the platform default of 33554432. A function may only narrow these limits, never raise them.
 - `isDisabled` (boolean) — leaves the function unreachable without deleting its code.
