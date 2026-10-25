@@ -196,7 +196,7 @@ SAASUFY_API_KEY=$(cat .saasufy-api-key)
 
 # 2. Check the schema to understand the "Message" model
 curl -H "Authorization:Bearer $SAASUFY_API_KEY" \
-  -XGET 'https://saasufy.com/api/Model?view=accountAlphabeticalView' | jq '.[] | select(.name=="Message")'
+  -XGET 'https://saasufy.com/api/Model?view=accountAlphabeticalView' | jq '.data[] | select(.name=="Message")'
 
 # 3. Get fields for the Message model (using the model ID from step 2)
 curl -g -H "Authorization:Bearer $SAASUFY_API_KEY" \

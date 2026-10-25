@@ -21,6 +21,10 @@ description: This skill helps you to setup, build, deploy and test your Saasufy 
 
 [data-management.md](data-management.md): A guide which explains how to create, read, update and delete records within a model collection in the user's service (once deployed). This can be useful for adding some dummy data into the collections to aid with testing. It provides curl commands for managing data within any collection.
 
+## Exporting and Importing
+
+[export-and-import.md](export-and-import.md): A guide which explains how to export a whole service — its schema, its data, or both — to a single JSON file and import it back over the HTTP API, in the same format the control panel's Import/Export buttons use. Read it before backing up a service, copying one into another account, keeping a schema in version control or bulk-loading records into a model.
+
 ## Components
 
 This important section contains documentation for how to use frontend Saasufy components/elements. It's essential to read the documentation of the relevant component before using it. These components are designed to work with each other declaratively and should not need code aside for advanced use cases.
