@@ -40,13 +40,31 @@ In the Claude Desktop app, the steps are the same as on the web:
 
 Plugins are saved to your Claude account, so if you have already installed it on the web, it will be available in Claude Desktop too (and vice versa).
 
-## Use the skill
+## Use the skills
 
-Ask your AI agent to set up your Saasufy app:
+How you get started depends on whether your AI agent is working inside a project directory.
+
+### With a coding harness (Claude Code or pi)
+
+Launch your agent from inside your project directory (an empty directory is fine for a new app), then ask it to set up your Saasufy app:
 
 ```text
 Please set up this Saasufy app.
 ```
+
+The agent will walk you through creating your Saasufy API credential, save it in your project directory and perform the first deployment.
+
+### Without a project directory (Claude web or Claude Desktop)
+
+In a regular chat there is no project directory, so there is no existing app for Claude to set up. Instead, start a new chat and describe the app you want to build:
+
+```text
+Please use the Saasufy skill to help me build an app. I don't have a project directory, so please guide me through the setup step by step.
+
+Here is what I want to build: <describe your app>
+```
+
+Claude will guide you through creating a Saasufy account and API credential, then build the app with you in the chat.
 
 ## License
 
