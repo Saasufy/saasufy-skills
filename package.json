@@ -3,6 +3,7 @@
   "version": "1.38.0",
   "description": "Saasufy skills for AI",
   "author": "Jonathan Gros-Dubois <jon@socketcluster.io>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saasufy/saasufy-skills.git"

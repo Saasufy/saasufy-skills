@@ -38,3 +38,7 @@ Ask your AI agent to set up your Saasufy app:
 ```text
 Please set up this Saasufy app.
 ```
+
+## License
+
+[MIT](LICENSE)
