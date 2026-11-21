@@ -13,23 +13,12 @@ Once installed, pi will discover the skill from `skills/saasufy/SKILL.md` automa
 
 ## Installing with Claude Code
 
-### Add the Saasufy Skills Marketplace
-
-After launching Claude Code, run:
+After launching Claude Code, run these two commands:
 
 ```text
-/plugin marketplace add saasufy/saasufy-skills
+/plugin marketplace add Saasufy/saasufy-skills
+/plugin install saasufy-skills@saasufy-skills
 ```
-
-### Install the Saasufy Skill
-
-Then search for the `saasufy-skills` plugin:
-
-```text
-/plugins
-```
-
-Browse to the `saasufy-skills` plugin and install.
 
 ## Use the skill
 
