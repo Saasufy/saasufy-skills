@@ -1,4 +1,4 @@
-# Skills
+# Saasufy Skills
 Saasufy AI skills for Claude Code and pi.
 
 Saasufy is a no-code/low-code, real-time data store and application-creation platform, packaged as a tool for your AI agent. Optimized for vibe-coding security and maintainability. Learn more about Saasufy at [saasufy.com](https://saasufy.com/).
@@ -6,7 +6,7 @@ Saasufy is a no-code/low-code, real-time data store and application-creation pla
 ## Installing with pi
 
 ```bash
-pi install git:github.com/Saasufy/skills
+pi install git:github.com/Saasufy/saasufy-skills
 ```
 
 Once installed, pi will discover the skill from `skills/saasufy/SKILL.md` automatically.
@@ -18,18 +18,18 @@ Once installed, pi will discover the skill from `skills/saasufy/SKILL.md` automa
 After launching Claude Code, run:
 
 ```text
-/plugin marketplace add saasufy/skills
+/plugin marketplace add saasufy/saasufy-skills
 ```
 
 ### Install the Saasufy Skill
 
-Then search for the `saasufy` plugin:
+Then search for the `saasufy-skills` plugin:
 
 ```text
 /plugins
 ```
 
-Browse to the `saasufy` plugin and install.
+Browse to the `saasufy-skills` plugin and install.
 
 ## Use the skill
 
